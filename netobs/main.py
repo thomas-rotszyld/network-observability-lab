@@ -399,7 +399,7 @@ def containerlab_deploy(
     """
     console.log("Deploying containerlab topology", style="info")
     console.log(f"Topology file: [orange1 i]{topology}", style="info")
-    exec_cmd = f"containerlab deploy -t {topology}"
+    exec_cmd = f"containerlab deploy -t {topology} --skip-post-deploy"
     if sudo:
         exec_cmd = f"sudo {exec_cmd}"
     run_cmd(exec_cmd, task_name="Deploying containerlab topology")
